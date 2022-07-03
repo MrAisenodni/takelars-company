@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStgMenu extends Migration
+class CreateStgMainMenu extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateStgMenu extends Migration
      */
     public function up()
     {
-        Schema::create('stg_menu', function (Blueprint $table) {
+        Schema::create('stg_main_menu', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('url')->nullable();
             $table->string('icon')->nullable();
             $table->boolean('parent')->default(0);
-
-            // Foreign Key to table stg_main_menu
-            $table->unsignedInteger('main_menu_id')->nullable();
             
             // Struktur Baku
             $table->boolean('active')->default(1);
@@ -39,6 +36,6 @@ class CreateStgMenu extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stg_menu');
+        Schema::dropIfExists('stg_main_menu');
     }
 }

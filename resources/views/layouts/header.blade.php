@@ -3,7 +3,7 @@
       <div class="container">
         <div class="left-nav">
           <div class="nav-brand">
-            <a href="index.html">
+            <a href="/">
               <img src="{{ asset('/images/logo.png') }}" alt="navbar-logo" width="100%" />
             </a>
           </div>
@@ -14,18 +14,13 @@
             visibility
           </label>
           <ul id="main-menu">
-            <li class="menu-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="menu-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="menu-item">
-              <a class="nav-link" href="service.html">Registration</a>
-            </li>
-            <li class="menu-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
+            @if ($menus)
+                @foreach ($menus as $menu)
+                  <li class="menu-item">
+                    <a class="nav-link" href="{{ $menu->url }}">{{ $menu->title }}</a>
+                  </li>
+                @endforeach
+            @endif
           </ul>
         </div>
 

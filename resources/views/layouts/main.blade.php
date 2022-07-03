@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="{{ asset('/css/owl.theme.default.css') }}" />
   <link rel="stylesheet" href="{{ asset('/css/all.min.css') }}" />
 
-  <link rel="shortcut icon" href="{{ asset('/images/fav-icon.png') }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ asset('/favicon.png') }}" type="image/x-icon" />
 </head>
 
 <body>
@@ -42,24 +42,22 @@
         <div class="container">
           <div class="row clearfix">
             <div class="column column-4 footer-widget-component">
-              <a href="index.html">
-                <img class="footer-logo res-img" src="images/logo.png" alt="footer-logo" />
+              <a href="/">
+                <img class="footer-logo res-img" src="{{ asset('/images/logo.jpg') }}" alt="footer-logo" />
               </a>
               <p class="footer-text footer-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                dolore.
+                {!! $provider->company_description !!}
               </p>
-              <a href="blog.html" class="button style-7">Get Location</a>
+              <a href="/kontak-kami" class="button style-7">Get Location</a>
             </div>
             <div class="column column-4 footer-widget-component">
               <p class="footer-title text-white">get in touch</p>
               <hr class="left-hr" />
-              <p class="footer-text"><b>+62 828 111 96 75</b></p>
+              <p class="footer-text"><b>{{ $provider->company_phone_number }}</b></p>
               <p class="footer-text">
-                Jl. Maleer Indah II, Maleer, Batununggal, Kota Bandung, Jawa
-                Barat 40274.
+                {{ $provider->company_address }}
               </p>
-              <p class="footer-text footer-email">consultant@contact.com</p>
+              <p class="footer-text footer-email">{{ $provider->company_email }}</p>
               <p class="footer-text footer-email">info@consultant.com</p>
             </div>
             <div class="column column-4 footer-widget-component">
@@ -137,30 +135,18 @@
         <div class="container">
           <div class="row clearfix">
             <div class="footer-copyright column column-2">
-              &copy; Copyright <span id="year"></span>,Built by&nbsp;<a href="https://themesawesome.com/"
-                class="text-green">Themes
-                Awesome</a>
+              &copy; Hak Cipta 2022<!-- <span id="year"></span> -->
+              <a href="#" class="text-green"> {{ $provider->company_name }}</a>
             </div>
             <div class="column column-2 footer-nav">
               <div class="footer-menu-wrapper">
-                <div class="footer-menu">
-                  <a class="footer-link" href="index.html">Home</a>
-                </div>
-                <div class="footer-menu">
-                  <a class="footer-link" href="service.html">Services</a>
-                </div>
-                <div class="footer-menu">
-                  <a class="footer-link" href="about.html">About</a>
-                </div>
-                <div class="footer-menu">
-                  <a class="footer-link" href="blog.html">Blog</a>
-                </div>
-                <div class="footer-menu">
-                  <a class="footer-link" href="contact.html">Contact</a>
-                </div>
-                <div class="footer-menu">
-                  <a class="footer-link" href="Appointment.html">Appointment</a>
-                </div>
+                @if ($menus)
+                    @foreach ($menus as $menu)
+                      <div class="footer-menu">
+                        <a class="footer-link" href="{{ $menu->url }}">{{ $menu->title }}</a>
+                      </div>
+                    @endforeach
+                @endif
               </div>
             </div>
           </div>

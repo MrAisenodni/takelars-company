@@ -14,4 +14,12 @@ use App\Http\Controllers\PagesController;
 |
 */
 
+/*
+    =====================================
+    =       Routes for Front End        =
+    =====================================
+*/
 Route::get('/', [PagesController::class, 'index']);
+Route::get('/tentang-kami', [PagesController::class, 'about_us']);
+Route::get('/kontak-kami', [PagesController::class, 'contact_us']);
+Route::get('/registrasi', [PagesController::class, 'registration']);
