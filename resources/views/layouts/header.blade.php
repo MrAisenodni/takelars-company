@@ -4,7 +4,7 @@
         <div class="left-nav">
           <div class="nav-brand">
             <a href="/">
-              <img src="{{ asset('/images/logo.png') }}" alt="navbar-logo" width="100%" />
+              <img src="{{ asset('/images/logo.jpg') }}" alt="navbar-logo" width="100%" />
             </a>
           </div>
 

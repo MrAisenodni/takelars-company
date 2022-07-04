@@ -10,10 +10,10 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="swiper-bg" style="
-            background: url('images/hero-image.png');
-            background-size: cover;
-            background-position: center center;
-          ">
+              background: url('/images/sliders/slider-1.jpg');
+              background-size: cover;
+              background-position: center center;
+            ">
               <div class="header-text-wrap">
                 <div class="container">
                   <div class="row header-text">
