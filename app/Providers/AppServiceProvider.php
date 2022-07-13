@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
         // This function to call and get data to all menu
         view()->composer('layouts.header', function ($view) {
             $view->with(
-                'menus', Menu::select('id', 'title', 'url')->where('active', 1)->get()
+                'menus', Menu::select('id', 'title', 'url')->where('active', 1)->where('admin', 0)->get()
             )->with(
                 'provider', Provider::where('active', 1)->first()
             );
@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('layouts.main', function ($view) {
             $view->with(
-                'menus', Menu::select('id', 'title', 'url')->where('active', 1)->get()
+                'menus', Menu::select('id', 'title', 'url')->where('active', 1)->where('admin', 0)->get()
             )->with(
                 'provider', Provider::where('active', 1)->first()
             );
