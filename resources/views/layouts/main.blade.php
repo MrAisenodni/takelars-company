@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@yield('title') - Takelars Globalindo Nusantara</title>
+  <title>{{ $menu->title }} - Takelars Globalindo Nusantara</title>
 
   <link rel="stylesheet" href="{{ asset('/style.css') }}" />
   <link rel="stylesheet" href="{{ asset('/css/responsive.css') }}" />
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="{{ asset('/css/owl.theme.default.css') }}" />
   <link rel="stylesheet" href="{{ asset('/css/all.min.css') }}" />
 
-  <link rel="shortcut icon" href="{{ asset('/favicon.png') }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ asset($provider->company_logo) }}" type="image/x-icon" />
 </head>
 
 <body>
@@ -48,20 +48,20 @@
               <p class="footer-text footer-desc">
                 {!! $provider->company_description !!}
               </p>
-              <a href="/kontak-kami" class="button style-7">Get Location</a>
+              <a href="/kontak-kami" class="button style-7">Lokasi Kami</a>
             </div>
             <div class="column column-4 footer-widget-component">
-              <p class="footer-title text-white">get in touch</p>
+              <p class="footer-title text-white">Hubungi Kami</p>
               <hr class="left-hr" />
               <p class="footer-text"><b>{{ $provider->company_phone_number }}</b></p>
               <p class="footer-text">
                 {{ $provider->company_address }}
               </p>
               <p class="footer-text footer-email">{{ $provider->company_email }}</p>
-              <p class="footer-text footer-email">info@consultant.com</p>
+              <p class="footer-text footer-email">{{ $provider->owner_email }}</p>
             </div>
             <div class="column column-4 footer-widget-component">
-              <p class="footer-title text-white">latest news</p>
+              <p class="footer-title text-white">Berita Terbaru</p>
               <hr class="left-hr" />
               <div class="footer-news-wrapper clear-fix">
                 <div class="row footer-news-item mt-2">
@@ -93,34 +93,28 @@
               </div>
             </div>
             <div class="column column-4 footer-widget-component">
-              <p class="footer-title text-white">Follow Us</p>
+              <p class="footer-title text-white">Ikut Kami</p>
               <hr class="left-hr" />
               <p class="footer-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                dolore.
+                Assalamualaikum Warrahmatullahi Wabarakatuh. Silahkan diikuti kawan-kawan. Terima kasih
               </p>
               <div class="footer-icon-wrapper">
-                <a href="index.html" target="_blank">
+                <a href="www.twitter.com" target="_blank">
                   <div class="footer-icon">
                     <i class="fab fa-twitter"></i>
                   </div>
                 </a>
-                <a href="index.html" target="_blank">
+                <a href="www.facebook.com" target="_blank">
                   <div class="footer-icon">
                     <i class="fab fa-facebook-f"></i>
                   </div>
                 </a>
-                <a href="index.html" target="_blank">
-                  <div class="footer-icon">
-                    <i class="fab fa-google-plus-g"></i>
-                  </div>
-                </a>
-                <a href="index.html" target="_blank">
+                <a href="www.linkedin.com" target="_blank">
                   <div class="footer-icon">
                     <i class="fab fa-linkedin-in"></i>
                   </div>
                 </a>
-                <a href="index.html" target="_blank">
+                <a href="www.instagram.com" target="_blank">
                   <div class="footer-icon">
                     <i class="fab fa-instagram"></i>
                   </div>

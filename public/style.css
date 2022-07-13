@@ -523,7 +523,7 @@ button:focus {
 /* 2.1 Header Style 1(Transparant) / .main-nav */
 .main-nav {
   position: absolute;
-  padding: 20px 25px 20px 25px;
+  /* padding: 20px 25px 20px 25px; */ 
   z-index: 10;
   right: 0;
   left: 0;
@@ -588,7 +588,7 @@ button:focus {
 
 #main-menu {
   margin: 0;
-  padding: 20px 0 20px 40px;
+  padding: 35px 0 20px 40px;
   display: flex;
   clear: both;
   border-bottom: 0;
@@ -776,6 +776,11 @@ button:focus {
   #main-menu-state:not(:checked) ~ #main-menu {
     display: flex;
     list-style: none;
+    width: 100%;
+  }
+
+  .logo {
+    width: 183px;
   }
 }
 

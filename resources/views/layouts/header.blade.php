@@ -4,10 +4,9 @@
         <div class="left-nav">
           <div class="nav-brand">
             <a href="/">
-              <img src="{{ asset('/images/logo.jpg') }}" alt="navbar-logo" width="100%" />
+              <img src="{{ asset($provider->company_logo_text) }}" alt="navbar-logo" class="logo" />
             </a>
           </div>
-
           <input id="main-menu-state" type="checkbox" />
           <label class="main-menu-btn" for="main-menu-state">
             <span class="main-menu-btn-icon"></span> Toggle main menu
@@ -21,22 +20,7 @@
                   </li>
                 @endforeach
             @endif
-          </ul>
-        </div>
-
-        <div class="right-nav">
-          <div class="nav-menu">
-            <div class="contact">
-              <i class="telp-icon fas fa-phone-alt" style="line-height: 2"></i>
-              <div class="contact-text">
-                <span class="text-white small-text">Call Us Today</span>
-                <span class="text-white telp-text"><b>+62 828 111 96 75</b></span>
-              </div>
-            </div>
-            <div class="contact-button">
-              <a href="Appointment.html" class="button style-1">Appointment</a>
-            </div>
-          </div>
+          </ul>          
         </div>
       </div>
     </nav>

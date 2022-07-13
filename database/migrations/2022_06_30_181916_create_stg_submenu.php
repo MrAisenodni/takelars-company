@@ -19,9 +19,11 @@ class CreateStgSubmenu extends Migration
             $table->string('url')->nullable();
             $table->string('icon')->nullable();
             $table->boolean('parent')->default(0);
+            $table->boolean('admin')->default(0);
 
             // Foreign Key to table stg_menu
-            $table->unsignedInteger('menu_id')->nullable();
+            $table->unsignedBigInteger('menu_id');
+            $table->foreign('menu_id')->references('id')->on('stg_menu');
             
             // Struktur Baku
             $table->boolean('active')->default(1);

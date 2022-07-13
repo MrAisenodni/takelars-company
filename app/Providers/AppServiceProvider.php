@@ -33,6 +33,15 @@ class AppServiceProvider extends ServiceProvider
                 'provider', Provider::where('active', 1)->first()
             );
         });
+
+        // For Administrator
+        view()->composer('admin.layouts.main', function ($view) {
+            $view->with(
+                'menus', Menu::select('id', 'title', 'icon', 'parent', 'url')->where('active', 1)->where('admin', 1)->get()
+            )->with(
+                'provider', Provider::where('active', 1)->first()
+            );
+        });
     }
 
     /**

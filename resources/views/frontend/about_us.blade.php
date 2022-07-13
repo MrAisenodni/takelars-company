@@ -100,6 +100,170 @@
       </div>
     </div>
   </section>
-  <!--END MISSIOn-->
+  <!--END MISSION-->
+
+  <!--TEAM START-->
+  <section class="Teams team-about">
+    <div class="container">
+      <div class="row clear-fix">
+        <div class="team-title">
+          <p class="text-light-gray text-center letter-space5">
+            ORANG YANG TERLIBAT
+          </p>
+          <h3 class="text-blue text-center text-bold">
+            Temui Pakar Kami
+          </h3>
+          <hr class="center-hr" />
+        </div>
+        <div class="column column-1 team-list">
+          <div class="column column-4 about-team-wrapper">
+            <div class="team-img-wrapper">
+              <div class="team-img">
+                <img class="res-img" src="{{ $provider->owner_photo }}" alt="team-images" width="252px" height="252px" />
+                <div class="overlay">
+                  <div class="overlay-body">
+                    <p class="text-white">
+                      Awali semua dengan senyuman. Sebab senyumnya akan mengalirkan energi positif.
+                      Energi positif itulah yang menjadi penggagasmu.
+                    </p>
+                    <div class="overlay-icon row">
+                      <a href="#" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-twitter"></i>
+                        </div>
+                      </a>
+                      <a href="#" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-facebook-f"></i>
+                        </div>
+                      </a>
+                      <a href="#" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-linkedin-in"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-desc">
+                <p class="text-blue team-name">{{ $provider->owner_name }}</p>
+                <small class="text-gray">Direktur Utama</small>
+              </div>
+            </div>
+          </div>
+          <div class="column column-4 about-team-wrapper">
+            <div class="team-img-wrapper">
+              <div class="team-img">
+                <img class="res-img" src="images/team-image-wrapper2.png" alt="team-images" />
+                <div class="overlay">
+                  <div class="overlay-body">
+                    <p class="text-white">
+                      At vero eos et accusamus et iusto odio dignissimos
+                      ducimus qui blanditiis praesentium voluptatum
+                    </p>
+                    <div class="overlay-icon row">
+                      <a href="index.html" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-twitter"></i>
+                        </div>
+                      </a>
+                      <a href="index.html" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-facebook-f"></i>
+                        </div>
+                      </a>
+                      <a href="index.html" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-linkedin-in"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-desc">
+                <p class="text-blue team-name">Charles Leeman</p>
+                <small class="text-gray">CEO</small>
+              </div>
+            </div>
+          </div>
+          <div class="column column-4 about-team-wrapper">
+            <div class="team-img-wrapper">
+              <div class="team-img">
+                <img class="res-img" src="images/team-image-wrapper3.png" alt="team-images" />
+                <div class="overlay">
+                  <div class="overlay-body">
+                    <p class="text-white">
+                      At vero eos et accusamus et iusto odio dignissimos
+                      ducimus qui blanditiis praesentium voluptatum
+                    </p>
+                    <div class="overlay-icon row">
+                      <a href="index.html" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-twitter"></i>
+                        </div>
+                      </a>
+                      <a href="index.html" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-facebook-f"></i>
+                        </div>
+                      </a>
+                      <a href="index.html" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-linkedin-in"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-desc">
+                <p class="text-blue team-name">Lussy Anderson</p>
+                <small class="text-gray">Chief Operating</small>
+              </div>
+            </div>
+          </div>
+          <div class="column column-4 about-team-wrapper">
+            <div class="team-img-wrapper">
+              <div class="team-img">
+                <img class="res-img" src="images/team-image-wrapper4.png" alt="team-images" />
+                <div class="overlay">
+                  <div class="overlay-body">
+                    <p class="text-white">
+                      At vero eos et accusamus et iusto odio dignissimos
+                      ducimus qui blanditiis praesentium voluptatum
+                    </p>
+                    <div class="overlay-icon row">
+                      <a href="index.html" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-twitter"></i>
+                        </div>
+                      </a>
+                      <a href="index.html" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-facebook-f"></i>
+                        </div>
+                      </a>
+                      <a href="index.html" target="_blank">
+                        <div class="icon">
+                          <i class="fab fa-linkedin-in"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="team-desc">
+                <p class="text-blue team-name">Johanson</p>
+                <small class="text-gray">Market Planning</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--END TEAM-->
 </div>
 @endsection

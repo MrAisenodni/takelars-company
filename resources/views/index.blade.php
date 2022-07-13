@@ -17,7 +17,7 @@
               <div class="header-text-wrap">
                 <div class="container">
                   <div class="row header-text">
-                    <img src="images/shape2.png" alt="header-shape" class="header-shape" />
+                    <img src="/images/shape2.png" alt="header-shape" class="header-shape" />
                     <div class="header-title">
                       <p class="text-white">welcome</p>
                     </div>
@@ -106,7 +106,7 @@
           </div>
           <div class="column column-2 gallery-section">
             <div class="gallery" id="lightGallery">
-              <div data-src="images/gallery-image1.png" data-responsive-src="images/gallery-image1.png"
+              <div data-src="/images/gallery-image1.png" data-responsive-src="/images/gallery-image1.png"
                 data-aos="fade-up" data-aos-duration="3100" class="img-gallery-wrap">
                 <a href="#">
                   <div class="img-gallery">
@@ -244,82 +244,6 @@
       </div>
     </section>
     <!---END SERVICES-->
-
-    <!---APPOITNMENT START-->
-    <section class="Appointment">
-      <div class="container">
-        <div class="row">
-          <div class="column column-60 desc-wrap">
-            <div class="row appointment-body">
-              <div class="column column-3 appointment-title">
-                <h2>Book An Appointment.</h2>
-                <hr class="left-hr mobile-hide">
-              </div>
-              <div class="column column-3 main-office">
-                <h2>Main office</h2>
-                <p class="appointment-telp">+62 828 111 96 75</p>
-                <p class="text-green">test@domain.com</p>
-              </div>
-              <div class="column column-3 branc-office">
-                <h2>Branch Office</h2>
-                <p class="appointment-telp">+62 828 111 96 75</p>
-                <p class="text-green">konsultan@domain.com</p>
-                <hr class="left-hr mobile">
-              </div>
-            </div>
-            <div class="row appoitnment-form">
-              <div class="column column-1 appoitnment-form">
-                <div class="column column-2 left-form">
-                  <form>
-                    <div class="input-field">
-                      <input type="text" class="form-input" placeholder="Your name" />
-                    </div>
-                    <div class="input-field">
-                      <textarea class="form-textarea" placeholder="Message" rows="13"></textarea>
-                    </div>
-                  </form>
-                </div>
-                <div class="column column-2 right-form">
-                  <form>
-                    <div class="input-field">
-                      <input type="text" class="form-input" placeholder="Email" />
-                    </div>
-                    <div class="input-field">
-                      <input type="text" class="form-input" placeholder="Subject" />
-                    </div>
-                    <div class="input-field">
-                      <select class="form-select">
-                        <option value="Business Consulting">
-                          Business Consulting
-                        </option>
-                        <option value="Market Research">Market Research</option>
-                        <option value="Risk Management">Risk Management</option>
-                        <option value="Financial Consulting">
-                          Financial Consulting
-                        </option>
-                      </select>
-                    </div>
-                    <button class="button style-4">Send a message</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column column-40 map-wrap">
-            <div class="gMaps">
-              <div class="mapouter">
-                <div class="gmap_canvas appointment-map">
-                  <iframe id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=maleer%20indah%20III&t=&z=15&ie=UTF8&iwloc=&output=embed">
-                  </iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!---END APPOINTMENT-->
 
     <!---TEAM START
               ==================================-->
@@ -602,128 +526,9 @@
     </section>
     <!---END BLOG-->
 
-    <!---TESTIMONI START
-              ==================================-->
-    <section class="Testimoni">
-      <div class="container testimoni-wrapper">
-        <div class="row">
-          <div class="testimoni-title">
-            <p class="letter-space5">Testimonial</p>
-            <h3 class="text-blue">From Great Our Clients.</h3>
-            <hr class="left-hr" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="owl-carousel slider-wrap">
-            <div class="testimomi-slider-wrapper">
-              <div class="row">
-                <div class="column column-3 client-image">
-                  <div class="testimoni-quote-wrapper">
-                    <div class="testimoni-quote">
-                      <span class="dot-img"></span>
-                      <div class="testimoni-icon">
-                        <i class="fas fa-quote-left"></i>
-                      </div>
-                    </div>
-                    <div class="testimoni-img-wrapper">
-                      <img class="testimoni-img" src="images/testimoni-img1.png" alt="testimoni-img" />
-                      <span class="dot-img"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="column column-2 client-testimoni-text">
-                  <div class="row">
-                    <div class="testimoni-text text-blue">
-                      <p>
-                        "Lorem ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque
-                        laudantium."
-                      </p>
-                    </div>
-                    <div class="testimoni-client">
-                      <p class="client-name">Maisie Williams</p>
-                      <p class="client-job">Designer</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="testimomi-slider-wrapper">
-                <div class="row">
-                  <div class="column column-3 client-image">
-                    <div class="testimoni-quote-wrapper">
-                      <div class="testimoni-quote">
-                        <span class="dot-img"></span>
-                        <div class="testimoni-icon">
-                          <i class="fas fa-quote-left"></i>
-                        </div>
-                      </div>
-                      <div class="testimoni-img-wrapper">
-                        <img class="testimoni-img" src="images/testimoni-img1.png" alt="testimoni-img" />
-                        <span class="dot-img"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column column-2 client-testimoni-text">
-                    <div class="row">
-                      <div class="testimoni-text text-blue">
-                        <p>
-                          "Lorem ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque
-                          laudantium."
-                        </p>
-                      </div>
-                      <div class="testimoni-client">
-                        <p class="client-name">Kit Harington</p>
-                        <p class="client-job">Photographer</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="testimomi-slider-wrapper">
-                <div class="row">
-                  <div class="column column-3 client-image">
-                    <div class="testimoni-quote-wrapper">
-                      <div class="testimoni-quote">
-                        <span class="dot-img"></span>
-                        <div class="testimoni-icon">
-                          <i class="fas fa-quote-left"></i>
-                        </div>
-                      </div>
-                      <div class="testimoni-img-wrapper">
-                        <img class="testimoni-img" src="images/testimoni-img1.png" alt="testimoni-img" />
-                        <span class="dot-img"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column column-2 client-testimoni-text">
-                    <div class="row">
-                      <div class="testimoni-text text-blue">
-                        <p>
-                          "Lorem ipsum dolor sit amet consectetur
-                          adipisicing elit. Porro consequuntur harum nulla"
-                        </p>
-                      </div>
-                      <div class="testimoni-client">
-                        <p class="client-name">Lana Condor</p>
-                        <p class="client-job">Businessman</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!---END TESTIMONI-->
-
     <!---NEWSLETTER START
               ==================================-->
-    <section class="Newsletter">
+    {{-- <section class="Newsletter">
       <div class="container">
         <div class="row">
           <div class="column column-2 newsletter-text">
@@ -742,7 +547,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
     <!---END NEWSLETTER-->
   </div>
 @endsection
