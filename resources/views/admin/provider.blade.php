@@ -198,7 +198,7 @@
                                 <div class="form-group">
                                     <label class="form-label" for="owner_position">Posisi</label>
                                     <span class="desc"></span>
-
+ 
                                     <div class="controls">
                                         <select class="select2" id="owner_position" name="owner_position">
                                             @if ($positions)
