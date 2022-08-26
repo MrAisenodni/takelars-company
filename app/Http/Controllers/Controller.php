@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin\Login;
+use App\Models\Admin\Masters\{
+    Position,
+};
 use App\Models\Settings\{
     Menu,
     Provider, 
@@ -20,6 +23,7 @@ class Controller extends BaseController
     {
         $this->login = new Login();
         $this->menu = new Menu();
+        $this->position = new Position();
         $this->provider = new Provider();
     }
 }

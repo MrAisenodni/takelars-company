@@ -304,8 +304,8 @@
         <ul class="info-menu right-links list-inline list-unstyled">
             <li class="profile list-inline-item">
                 <a href="#" data-toggle="dropdown" class="toggle">
-                    <img src="{{ asset('/admin/data/profile/profile-blog.jpg') }}" alt="user-image" class="rounded-circle img-inline">
-                    <span>Mark Yurey <i class="fa fa-angle-down"></i></span>
+                    <img src="{{ $provider->owner_photo }}" alt="user-image" class="rounded-circle img-inline">
+                    <span>{{ $provider->owner_name }} <i class="fa fa-angle-down"></i></span>
                 </a>
                 <ul class="dropdown-menu profile animated fadeIn">
                     <li class="dropdown-item">
@@ -327,7 +327,7 @@
                         </a>
                     </li>
                     <li class="last dropdown-item">
-                        <a href="ui-login.html">
+                        <a href="/logout">
                             <i class="fa fa-lock"></i>
                             Logout
                         </a>

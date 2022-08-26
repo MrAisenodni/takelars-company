@@ -1,13 +1,17 @@
 @extends('admin.layouts.main')
 
 @section('styles')
-    <link href="{{ asset('/admin/plugins/datepicker/css/datepicker.css') }}" rel="stylesheet" type="text/css" media="screen"/>       
+    <link href="{{ asset('/admin/plugins/jquery-ui/smoothness/jquery-ui.min.css') }}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{{ asset('/admin/plugins/datepicker/css/datepicker.css') }}" rel="stylesheet" type="text/css" media="screen"/>   
+    <link href="{{ asset('/admin/plugins/select2/select2.css') }}" rel="stylesheet" type="text/css" media="screen"/>    
 @endsection
 
 @section('scripts')
+    <script src="{{ asset('/admin/plugins/jquery-ui/smoothness/jquery-ui.min.js') }}" type="text/javascript"></script> 
     <script src="{{ asset('/admin/plugins/datepicker/js/datepicker.js') }}" type="text/javascript"></script> 
     <script src="{{ asset('/admin/plugins/autosize/autosize.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/admin/plugins/inputmask/min/jquery.inputmask.bundle.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/admin/plugins/select2/select2.min.js') }}" type="text/javascript"></script>
 @endsection
 
 @section('content')
@@ -194,8 +198,19 @@
                                 <div class="form-group">
                                     <label class="form-label" for="owner_position">Posisi</label>
                                     <span class="desc"></span>
+
                                     <div class="controls">
-                                        <input type="text" value="{{ old('owner_position', $provider->owner_position) }}" name="owner_position" class="form-control" id="owner_position">
+                                        <select class="select2" id="owner_position" name="owner_position">
+                                            @if ($positions)
+                                                @foreach ($positions as $position)
+                                                    <option value="{{ $position->id }}"
+                                                        @if (old('owner_position', $provider->owner_position_id) == $position->id)
+                                                            selected
+                                                        @endif
+                                                    >{{ $position->name }}</option>
+                                                @endforeach
+                                            @endif
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -225,7 +240,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label" for="owner_photo">Logo Utama</label>
+                                    <label class="form-label" for="owner_photo">Foto Pemilik</label>
                                     <span class="desc"></span>
                                     <img class="img-fluid" src="{{ $provider->owner_photo }}" alt="" style="max-width:120px; max-height: 30px">
                                     <div class="controls">

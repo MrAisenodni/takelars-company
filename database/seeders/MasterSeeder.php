@@ -91,5 +91,44 @@ class MasterSeeder extends Seeder
                 'updated_at'    => null,
             ],
         ]);
+
+        // Position => 5
+        DB::table('mst_position')->insert([
+            [
+                'name'          => 'Direktur Utama',
+                'sequence'      => 2,
+                'created_by'    => 'Migrasi',
+                'created_at'    => now(),
+                'updated_at'    => null,
+            ],
+            [
+                'name'          => 'Komisaris Utama',
+                'sequence'      => 1,
+                'created_by'    => 'Migrasi',
+                'created_at'    => now(),
+                'updated_at'    => null,
+            ],
+            [
+                'name'          => 'Manager Keuangan',
+                'created_by'    => 'Migrasi',
+                'sequence'      => 3,
+                'created_at'    => now(),
+                'updated_at'    => null,
+            ],
+            [
+                'name'          => 'Manager Operasional',
+                'created_by'    => 'Migrasi',
+                'sequence'      => 4,
+                'created_at'    => now(),
+                'updated_at'    => null,
+            ],
+            [
+                'name'          => 'Manager Supervisor',
+                'created_by'    => 'Migrasi',
+                'sequence'      => 5,
+                'created_at'    => now(),
+                'updated_at'    => null,
+            ],
+        ]);
     }
 }

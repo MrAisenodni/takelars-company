@@ -5,13 +5,13 @@
         <!-- USER INFO - START -->
         <div class="profile-info row">
             <div class="profile-image col-lg-4 col-md-4 col-4">
-                <a href="ui-profile.html">
-                    <img src="{{ asset('/admin/data/profile/profile-blog.jpg') }}" class="img-fluid rounded-circle">
+                <a href="/adm-profile">
+                    <img src="{{ $provider->owner_photo }}" class="img-fluid rounded-circle">
                 </a>
             </div>
             <div class="profile-details col-lg-8 col-md-8 col-8">
                 <h3>
-                    <a href="ui-profile.html">Mark Yurey</a>
+                    <a href="/adm-profile/{{ $provider->id }}">{{ $provider->owner_name }}</a>
                     <!-- Available statuses: online, idle, busy, away and offline -->
                     <span class="profile-status online"></span>
                 </h3>

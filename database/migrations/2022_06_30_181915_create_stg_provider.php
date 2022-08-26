@@ -33,7 +33,7 @@ class CreateStgProvider extends Migration
 
             // Owner structure table
             $table->string('owner_name')->nullable();
-            $table->string('owner_position')->nullable();
+            $table->unsignedInteger('owner_position_id')->nullable();
             $table->date('owner_birth_date');
             $table->string('owner_birth_place');
             $table->string('owner_phone_number')->nullable();

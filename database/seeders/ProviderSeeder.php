@@ -27,7 +27,7 @@ class ProviderSeeder extends Seeder
                 'company_logo'          => '/favicon.png',
                 'company_logo_text'     => '/images/logo.jpg',
                 'owner_name'            => 'Ratno Haryanto',
-                'owner_position'        => 'Owner',
+                'owner_position_id'     => 1,
                 'owner_birth_place'     => 'Jakarta',
                 'owner_birth_date'      => '1998-02-19',
                 'owner_phone_number'    => '+62 813-8575-1959',

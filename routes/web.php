@@ -47,4 +47,7 @@ Route::middleware('authcheck')->group(function() {
 
     // Section of Master Menu
     Route::resource('/adm-master/kategori', CategoryController::class);
+    Route::resource('/adm-master/tag', TagController::class);
+    Route::resource('/adm-master/posisi', PositionController::class);
+    Route::resource('/adm-master/posisi', PositionController::class);
 });

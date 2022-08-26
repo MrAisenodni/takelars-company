@@ -3006,6 +3006,9 @@ var table5 = $('#example-5').DataTable();
         // select2
         if ($.isFunction($.fn.select2)) {
 
+            // Simple Select2
+            $('.select2').select2();
+
             $("#s2example-1").select2({
                 placeholder: 'Select your country...',
                 allowClear: true

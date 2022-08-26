@@ -12,6 +12,7 @@ class ProviderController extends Controller
     {
         $data = [
             'path'      => '/adm-provider',
+            'positions' => $this->position->select('id', 'name')->where('active', 1)->get(),
             'provider'  => $this->provider->where('active', 1)->first(),
         ];
 
@@ -61,6 +62,7 @@ class ProviderController extends Controller
                 'owner_email'         => $input['owner_email'],
                 'owner_phone_number'  => $input['owner_phone_number'],
                 'owner_address'       => $input['owner_address'],
+                'owner_position_id'   => $input['owner_position'],
                 'owner_photo'         => $input['old_owner_photo'],
             ];
 
@@ -83,7 +85,7 @@ class ProviderController extends Controller
         }
 
         $data += [
-            'updated_by'        => 'Administrator',
+            'updated_by'        => session()->get('suser_id'),
             'updated_at'        => now(),
         ];
 

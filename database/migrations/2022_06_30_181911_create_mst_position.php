@@ -16,6 +16,7 @@ class CreateMstPosition extends Migration
         Schema::create('mst_position', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('sequence'); // Digunakan untuk mengurutkan
             
             // Struktur Baku
             $table->boolean('active')->default(1);
