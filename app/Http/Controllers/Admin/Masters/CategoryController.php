@@ -14,8 +14,12 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        $path = '/adm-master/kategori';
+
         $data = [
-            'path'      => '/adm-master/kategori',
+            'path'          => $path,
+            'menu'          => $this->submenu->select('id', 'title')->where('url', $path)->first(),
+            'categories'    => $this->category->select('id', 'name')->where('active', 1)->get(),
         ];
 
         return view('admin.masters.category.index', $data);

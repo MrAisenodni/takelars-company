@@ -1,118 +1,88 @@
 @extends('admin.layouts.main')
 
 @section('styles')
-  <link href="{{ asset('/admin/plugins/morris-chart/css/morris.css' )}}" rel="stylesheet" type="text/css" media="screen"/>
-  <link href="{{ asset('/admin/plugins/jquery-ui/smoothness/jquery-ui.min.css' )}}" rel="stylesheet" type="text/css" media="screen"/>
-  <link href="{{ asset('/admin/plugins/jvectormap/jquery-jvectormap-2.0.1.css' )}}" rel="stylesheet" type="text/css" media="screen"/>
-  <link href="{{ asset('/admin/plugins/icheck/skins/minimal/white.css' )}}" rel="stylesheet" type="text/css" media="screen"/>   
+    <link href="{{ asset('/admin/plugins/datatables/css/datatables.min.css') }}" rel="stylesheet" type="text/css" media="screen"/> 
 @endsection
 
 @section('scripts')
-  <script src="{{ asset('/admin/plugins/jquery-ui/smoothness/jquery-ui.min.js' )}}" type="text/javascript"></script> 
-  <script src="{{ asset('/admin/plugins/sparkline-chart/jquery.sparkline.min.js' )}}" type="text/javascript"></script>
-  <script src="{{ asset('/admin/plugins/easypiechart/jquery.easypiechart.min.js' )}}" type="text/javascript"></script>
-  <script src="{{ asset('/admin/plugins/morris-chart/js/raphael-min.js' )}}" type="text/javascript"></script>
-  <script src="{{ asset('/admin/plugins/morris-chart/js/morris.min.js' )}}" type="text/javascript"></script>
-  <script src="{{ asset('/admin/plugins/jvectormap/jquery-jvectormap-2.0.1.min.js' )}}" type="text/javascript"></script>
-  <script src="{{ asset('/admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' )}}" type="text/javascript"></script>
-  <script src="{{ asset('/admin/plugins/gauge/gauge.min.js' )}}" type="text/javascript"></script>
-  <script src="{{ asset('/admin/plugins/icheck/icheck.min.js' )}}" type="text/javascript"></script>
-  <script src="{{ asset('/admin/js/blo-dashboard.js' )}}" type="text/javascript"></script>
+    <script src="{{ asset('/admin/plugins/datatables/js/dataTables.min.js') }}" type="text/javascript"></script> 
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
 @endsection
 
 @section('content')
-  <section id="main-content" class=" ">
+<section id="main-content" class=" ">
     <section class="wrapper main-wrapper" style=''>
+
         <div class='col-xl-12 col-lg-12 col-md-12 col-12'>
             <div class="page-title">
-              <div class="float-left">
-                <h1 class="title">Blog</h1>
-              </div>
+
+                <div class="float-left">
+                    <h1 class="title">{{ $menu->title }}</h1>                            
+                </div>
+
+                <div class="float-right d-none">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="/"><i class="fa fa-home"></i>Home</a>
+                        </li>
+                        <li>
+                            <a href="tables-basic.html">Tables</a>
+                        </li>
+                        <li class="active">
+                            <strong>{{ $menu->title }}</strong>
+                        </li>
+                    </ol>
+                </div>
+
             </div>
         </div>
         <div class="clearfix"></div>
 
         <div class="col-xl-12">
-          <section class="box nobox">
-            <div class="content-body">
-              <div class="row">
-                  <div class="col-lg-3 col-md-6 col-12">
-                      <div class="r4_counter db_box">
-                          <i class='float-left fa fa-thumbs-up icon-md icon-rounded icon-primary'></i>
-                          <div class="stats">
-                              <h4><strong>450K</strong></h4>
-                              <span>Blog Page Views</span>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-12">
-                      <div class="r4_counter db_box">
-                          <i class='float-left fa fa-user icon-md icon-rounded icon-orange'></i>
-                          <div class="stats">
-                              <h4><strong>6243</strong></h4>
-                              <span>New Visitors</span>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-12">
-                      <div class="r4_counter db_box">
-                          <i class='float-left fa fa-database icon-md icon-rounded icon-purple'></i>
-                          <div class="stats">
-                              <h4><strong>99.9%</strong></h4>
-                              <span>Server Up</span>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-12">
-                      <div class="r4_counter db_box">
-                          <i class='float-left fa fa-users icon-md icon-rounded icon-warning'></i>
-                          <div class="stats">
-                              <h4><strong>1433</strong></h4>
-                              <span>New Users</span>
-                          </div>
-                      </div>
-                  </div>
-              </div> <!-- End .row --> 
-              
-              <div class="row">
+            <section class="box ">
+                <header class="panel_header">
+                    <h2 class="title float-left">Data {{ $menu->title }}</h2>
+                    <div class="actions panel_actions float-right">
+                        <i class="box_toggle fa fa-chevron-down"></i>
+                        {{-- <i class="box_close fa fa-times"></i> --}}
+                    </div>
+                </header>
+                <div class="content-body">    
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12 padding-0">
 
+                            <table id="example-11" class="table table-striped dt-responsive display" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if ($categories)
+                                        @foreach ($categories as $category)
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $category->name }}</td>
+                                                <td>{{ $category->id }}</td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
+                                </tbody>
+                            </table>
 
-
-                  <div class="col-lg-12 col-md-12 col-12">
-                      <div class="r1_maingraph db_box">
-                          <span class='float-left'>
-                              <i class='icon-purple fa fa-square icon-xs'></i>&nbsp;<small>PAGE VIEWS</small>&nbsp; &nbsp;<i class='fa fa-square icon-xs icon-primary'></i>&nbsp;<small>UNIQUE VISITORS</small>
-                          </span>
-                          <div id="db_morris_area_graph" style="height:272px;width:100%;"></div>
-                      </div>
-                  </div>
-
-              </div> <!-- End .row -->
-
-              <div class="row">
-                  <div class="col-lg-6 col-md-12 col-12">
-
-                      <div class="r1_graph1 db_box db_box_large">
-                          <span class='bold'>98.95%</span>
-                          <span class='float-right'><small>SERVER UP</small></span>
-                          <div class="clearfix"></div>
-                          <span class="db_dynamicbar">Loading...</span>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 col-md-12 col-12">
-
-                      <div class="r1_graph2 db_box db_box_large">
-                          <span class='bold'>2332</span>
-                          <span class='float-right'><small>USERS ONLINE</small></span>
-                          <div class="clearfix"></div>
-                          <span class="db_linesparkline">Loading...</span>
-                      </div>
-
-                  </div>
-              </div>
-            </div>
-          </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
-  </section>
+</section>
 @endsection
